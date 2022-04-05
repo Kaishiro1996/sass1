@@ -1,0 +1,148 @@
+//colors
+
+$color_principal: #D85A5A;
+$color_secundario: #9E7474;
+
+//fonts
+
+$Raleway: 'Raleway';
+$Poppins: 'Poppins';
+
+@font-face {
+font-family: "Futura Bold";
+src: url("/Futura Bold font.ttf") format("truetype");
+font-style: 700;
+font-weight: bold;
+}
+
+@mixin button {
+    padding: 1em 2em;
+    border-radius: 1.5em;
+    text-decoration: none;
+    font-family: $Raleway;
+    font-size: 20px;
+    
+}
+.container{
+
+    padding-left: 2em;
+
+}
+@mixin raleway {
+    font-family: 'Raleway';
+    font-size: 22px;
+}
+
+@mixin fullarrow {
+position: absolute;
+margin-left: 2em;    
+}
+hr{
+    @include fullarrow();
+    height: 2px;
+    width: 25.5%;
+    background-color: $color_principal;
+    margin-top: -0.5em;
+}
+li{
+    list-style-type: none;
+}
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    
+}
+
+
+h1{
+    font-family: $Poppins;
+    font-size: 67px;
+
+}
+h2{
+    font-family: $Poppins;
+    font-size: 50px;
+}
+.title1{
+    font-family: Futura Bold;
+    font-size: 52px;
+    margin-bottom: 2em;
+}
+
+.text-secondary{
+@include raleway();
+color: $color_secundario;
+margin: 2em 0;
+}
+.breakfast{
+    @include raleway();
+    font-weight: bold;
+    margin: 2em 0;
+    
+}
+
+
+
+.viewMenu{
+    @include button();
+    background-color: $color_principal;
+    color: #fff;
+
+    
+}
+
+.bookatable{
+    @include button();
+    background-color: #dfdfdf;
+    color: $color_principal;
+    
+
+}
+
+.arrow{
+    @include fullarrow();
+    border: solid $color_principal;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 0.5em;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin-left: 12em;
+    margin-top: -1em;
+}
+
+
+
+.columna1{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 700px;
+    margin-top: 10px;
+
+}
+.columna2{
+    margin-left: 600px;
+    margin-right: 20px;
+    margin-top: 10px;
+
+}
+
+@mixin full-logo{
+    position: absolute;
+    background-color: black;
+    width: 5em;
+    height: 7em;
+    border-radius: 1em;
+}
+
+
+.logo-bottom{
+    @include full-logo();
+    top: 3.5em;
+    right: 7em;
+    border-bottom-right-radius: 8em;
+    padding-top: 1em;
+    padding-left: 1em;
+}
